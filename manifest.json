@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Manga Translator",
+    "version": "1.0",
+    "description": "Translates manga from Japanese to English",
+
+    "action": {
+        "default_popup": "html/popup.html",
+        "default_icon": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["://rawkuma.com"],
+            "js": ["js/content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "host_permissions": [
+        "http://rawkuma.com/*"
+        
+    ]
+}
